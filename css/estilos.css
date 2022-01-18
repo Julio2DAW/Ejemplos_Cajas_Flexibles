@@ -1,0 +1,43 @@
+body{
+
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header, footer{
+
+    text-align: center;
+    background-color: blue;
+    color: white;
+    width: 96.67%;
+    padding: 1.67%;
+}
+
+header h1{
+
+    font-size: 40px;
+}
+
+main{
+
+    min-height: 600px;
+    background-color: chocolate;
+    color: white;
+    width: 96.67%;
+    padding: 1.67%;
+}
+
+section div{
+
+    text-align: justify;
+}
+
+section div p{
+
+    margin-bottom: 20px;
+}
+
+a{
+
+    color: black;
+}

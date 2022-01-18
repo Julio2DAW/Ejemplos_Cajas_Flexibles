@@ -1,0 +1,120 @@
+body{
+    margin: 0 auto;
+}
+
+/*Flex - Direction*/
+.flex_direction{
+
+    width: 96.67%;
+    padding: 1.67%;
+    display: flex;
+    flex-direction: row-reverse; /*Invierte el orden de los elementos dentro de este div*/
+    background-color: aquamarine;
+}
+
+.flex_direction div{
+
+    width: 24.17%;
+    text-align: center;
+}
+
+/*Flex - Grow*/
+.flex_grow{
+
+    width: 96.67%;
+    padding: 1.67%;
+    display: flex;
+    background-color: aquamarine;
+}
+
+.flex_grow div{
+
+    text-align: center;
+    width: 16.7%;
+}
+
+.flex_grow div:nth-of-type(1) {
+    
+    flex-grow: 1; /*Un espacio sobrante*/
+    background-color: white;
+}
+
+.flex_grow div:nth-of-type(2) {
+    
+    flex-grow: 3; /*Tres espacio sobrante*/
+    background-color: beige;
+}
+
+.flex_grow div:nth-of-type(3) {
+    
+    flex-grow: 3; /*Tres espacio sobrante*/
+    background-color: olive;
+}
+
+.flex_grow div:nth-of-type(4) {
+    
+    flex-grow: 1; /*Un espacio sobrante*/
+    background-color: orange;
+}
+
+/*Flex - Shrink*/
+.flex_shrink{
+
+    width: 96.67%;
+    padding: 1.67%;
+    display: flex;
+    background-color: aquamarine;
+}
+
+.flex_shrink div{
+
+    width: 300px;
+    text-align: center;
+}
+
+.flex_shrink div:nth-last-of-type(1){
+
+    flex-shrink: 3; /*Encoger 3 veces más rápido*/
+    background-color: beige;
+}
+
+.flex_shrink div:nth-last-of-type(2){
+
+    flex-shrink: 0; /*No encoger*/
+    background-color: orchid;
+}
+
+.flex_shrink div:nth-last-of-type(3){
+
+    flex-shrink: 0; /*No encoger*/
+    background-color: orangered;
+}
+
+.flex_shrink div:nth-last-of-type(4){
+
+    flex-shrink: 3; /*Encoger 3 veces más rápido*/
+    background-color: azure;
+}
+
+/*Flex - Direction*/
+.flex_wrap{
+
+    width: 96.67%;
+    padding: 1.67%;
+    display: flex;
+    flex-wrap: wrap-reverse; /*Cuando las cajas no tengan espacio disponible suben*/
+    background-color: aquamarine;
+}
+
+.flex_wrap div{
+
+    width: 300px;
+    text-align: center;
+}
+
+/*Volver a la página de inicio*/
+.volver{
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+}
