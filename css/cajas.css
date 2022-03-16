@@ -275,6 +275,31 @@ body{
     text-align: center;
 }
 
+/*Flex - Flow*/
+/*
+    La propiedad flex-flow es la unión de la propiedad flex-direction y flex-wrap, si tenemos que usar las
+    dos propiedades en un mismo menú como en este caso lo más normal es utilizar flex-flow.
+*/
+.flex_flow{
+
+    width: 96.67%;
+    max-height: 300px;
+    padding: 1.67%;
+    display: flex;
+    flex-flow: column-reverse wrap-reverse;/*
+    Ordena las cajas de forma inversa, las coloca en vertical y las desplaza a la izquierda si se
+    quedan sin espacio.
+    */
+    background-color: aquamarine;
+}
+
+.flex_flow div{
+
+    width: 300px;
+    height: 100px;
+    text-align: center;
+}
+
 /*Volver a la página de inicio*/
 .volver{
     margin-top: 20px;
