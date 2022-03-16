@@ -2,13 +2,23 @@ body{
     margin: 0 auto;
 }
 
-/*Flex - Direction*/
+/*Flex - Direction : Row - Reverse*/
+/*
+    flex-direction: row-reverse, lo que hacemos es invertir el orden de las cajas que están dentro de la
+    caja contenedora.
+*/
 .flex_direction{
 
     width: 96.67%;
     padding: 1.67%;
     display: flex;
-    flex-direction: row-reverse; /*Invierte el orden de los elementos dentro de este div*/
+    flex-direction: row-reverse; /*
+    Invierte el orden de los elementos dentro de este div:
+        - La caja primera del contenedor .flex_direction ocupará la cuarta posición.
+        - La caja segunda del contenedor .flex_direction ocupará la tercera posición.
+        - La caja tercera del contenedor .flex_direction ocupará la segunda posición.
+        - La caja cuarta del contenedor .flex_direction ocupará la primera posición.
+    */
     background-color: aquamarine;
 }
 
@@ -18,7 +28,84 @@ body{
     text-align: center;
 }
 
+/*Flex - Direction : Row*/
+/*
+    flex-direction: row, lo que hacemos es que las cajas de dentro de la contenedora, mantengan el orden,
+    esta opción es la de por defecto.
+*/
+.flex_direction2{
+
+    width: 96.67%;
+    padding: 1.67%;
+    display: flex;
+    flex-direction: row; /*
+    Las cajas mantienen el orden.
+    */
+    background-color: aquamarine;
+}
+
+.flex_direction2 div{
+
+    width: 24.17%;
+    text-align: center;
+}
+
+/*Flex - Direction : Column*/
+/*
+    flex-direction: column, lo que hacemos es que las cajas de dentro de la contenedora, mantengan el orden,
+    pero aparecen colocadas una debajo de otra.
+*/
+.flex_direction3{
+
+    width: 96.67%;
+    padding: 1.67%;
+    display: flex;
+    flex-direction: column; /*
+    Las cajas mantienen el orden, pero en orden vertical.
+    */
+    background-color: aquamarine;
+}
+
+.flex_direction3 div{
+
+    width: 24.17%;
+    text-align: center;
+}
+
+/*Flex - Direction : Column - Reverse*/
+/*
+    flex-direction: column-reverse, lo que hacemos es que las cajas de dentro de la contenedora, con un orden inverso,
+    pero aparecen colocadas una debajo de otra.
+*/
+.flex_direction4{
+
+    width: 96.67%;
+    padding: 1.67%;
+    display: flex;
+    flex-direction: column-reverse; /*
+    Las cajas invierten el orden, pero en orden vertical.
+    */
+    background-color: aquamarine;
+}
+
+.flex_direction4 div{
+
+    width: 24.17%;
+    text-align: center;
+}
+
 /*Flex - Grow*/
+/*
+    Esta propiedad lo que hace es repartir el espacio sobrante de la caja contenedora a sus cajas hijas
+    haciendo que estas aumenten de tamaño siempre que nosotros se lo indiquemos.
+    Divide el espacio en función de cajas que tengamos y del tamañp que nosotros le digamos que queremos
+    para cada caja.
+    Si queremos que una caja en concreto o varias no aumenten de tamaño le daremos valor 0 a la propiedad
+    flex-grow, si queremos que ocupe una parte de ese espacio sobrante le daremos el valor 1, si queremos
+    que ocupe dos partes de ese espacio sobrante le daremos el valor 2, así sucesivamente.
+    En este caso hemos partido el espacio sobrante en 8 partes para las 4 cajas: siguiendo el enunciado
+    del html: "Hacer que las dos cajas del centro tengan el triple de tamaño sobrante que el resto de las cajas".
+*/
 .flex_grow{
 
     width: 96.67%;
@@ -35,29 +122,51 @@ body{
 
 .flex_grow div:nth-of-type(1) {
     
-    flex-grow: 1; /*Un espacio sobrante*/
+    flex-grow: 1; /*
+    Le indicamos con esta propiedad es que ocupará una parte del espacio sobrante
+    de su caja contenedora (.flex_grow).
+    */
     background-color: white;
 }
 
 .flex_grow div:nth-of-type(2) {
     
-    flex-grow: 3; /*Tres espacio sobrante*/
+    flex-grow: 3; /*
+    Le indicamos con esta propiedad es que ocupará tres partes del espacio sobrante
+    de su caja contenedora (.flex_grow).
+    */
     background-color: beige;
 }
 
 .flex_grow div:nth-of-type(3) {
     
-    flex-grow: 3; /*Tres espacio sobrante*/
+    flex-grow: 3; /*
+    Le indicamos con esta propiedad es que ocupará tres partes del espacio sobrante
+    de su caja contenedora (.flex_grow).
+    */
     background-color: olive;
 }
 
 .flex_grow div:nth-of-type(4) {
     
-    flex-grow: 1; /*Un espacio sobrante*/
+    flex-grow: 1; /*
+    Le indicamos con esta propiedad es que ocupará una parte del espacio sobrante
+    de su caja contenedora (.flex_grow).
+    */
     background-color: orange;
 }
 
 /*Flex - Shrink*/
+/*
+    Esta propiedad lo que hace es disminuir el espacio de las cajas que están dentro de la caja contenedora
+    con el objetivo de que estas no ocupen más espacio que se caja contenedora ya que se saldrían de ella.
+    Si queremos que una caja en concreto o varias no disminuyan de tamaño le daremos valor 0 a la propiedad
+    flex-shrink, si queremos que disminuya una parte de ese espacio faltante le daremos el valor 1, si queremos
+    que disminuya dos partes de ese espacio faltante le daremos el valor 2, así sucesivamente.
+    En este caso hemos partido el espacio faltante en 6 partes para las 4 cajas: siguiendo el enunciado
+    del html: "A medida que la caja contenedora se haga más pequeña las dos cajas centrales interiores no
+    debe de encogerse y las laterales deben de encogerse 3 veces más rápido que el resto.".
+*/
 .flex_shrink{
 
     width: 96.67%;
@@ -74,29 +183,43 @@ body{
 
 .flex_shrink div:nth-last-of-type(1){
 
-    flex-shrink: 3; /*Encoger 3 veces más rápido*/
+    flex-shrink: 3; /*
+    Le indicamos con esta propiedad es que disminuya tres partes del espacio faltante a medida que
+    su caja contenedora (.flex_shrink) disminuye.
+    */
     background-color: beige;
 }
 
 .flex_shrink div:nth-last-of-type(2){
 
-    flex-shrink: 0; /*No encoger*/
+    flex-shrink: 0; /*
+    Le indicamos con esta propiedad es que no disminuya a medida que su caja contenedora (.flex_shrink) disminuye.
+    */
     background-color: orchid;
 }
 
 .flex_shrink div:nth-last-of-type(3){
 
-    flex-shrink: 0; /*No encoger*/
+    flex-shrink: 0; /*
+    Le indicamos con esta propiedad es que no disminuya a medida que su caja contenedora (.flex_shrink) disminuye.
+    */
     background-color: orangered;
 }
 
 .flex_shrink div:nth-last-of-type(4){
 
-    flex-shrink: 3; /*Encoger 3 veces más rápido*/
+    flex-shrink: 3; /*
+    Le indicamos con esta propiedad es que disminuya tres partes del espacio faltante a medida que
+    su caja contenedora (.flex_shrink) disminuye.
+    */
     background-color: azure;
 }
 
-/*Flex - Direction*/
+/*Flex - Wrap : Wrap - Reverse*/
+/*
+    flex-wrap: wrap-reverse, lo que hacemos es que cuando una caja se quede sin espacio en su caja contenedora,
+    se colocan encima de las otras.
+*/
 .flex_wrap{
 
     width: 96.67%;
@@ -107,6 +230,46 @@ body{
 }
 
 .flex_wrap div{
+
+    width: 300px;
+    text-align: center;
+}
+
+/*Flex - Wrap : Wrap*/
+/*
+    flex-wrap: wrap, lo que hacemos es que cuando una caja se quede sin espacio en su caja contenedora,
+    se colocan debajo de las otras.
+*/
+.flex_wrap2{
+
+    width: 96.67%;
+    padding: 1.67%;
+    display: flex;
+    flex-wrap: wrap; /*Cuando las cajas no tengan espacio disponible bajan*/
+    background-color: aquamarine;
+}
+
+.flex_wrap2 div{
+
+    width: 300px;
+    text-align: center;
+}
+
+/*Flex - Wrap : Nowrap*/
+/*
+    flex-wrap: nowrap, lo que hacemos es que cuando una caja se quede sin espacio en su caja contenedora,
+    las otras cajas se ajustan para permanecer todas en el mismo nivel.
+*/
+.flex_wrap3{
+
+    width: 96.67%;
+    padding: 1.67%;
+    display: flex;
+    flex-wrap: nowrap; /*Cuando las cajas no tengan espacio ajustan su contenido para estar todas al mismo nivel*/
+    background-color: aquamarine;
+}
+
+.flex_wrap3 div{
 
     width: 300px;
     text-align: center;
